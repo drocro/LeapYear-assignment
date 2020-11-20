@@ -2,23 +2,19 @@ package dssc.assignment.leapyear;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class Convert {
 
-    @Test
-    void convert_4_to_true(){
+    @ParameterizedTest
+    @ValueSource(ints ={4, 8, 1996})
+    void basic_leap_years_to_true(int number){
         LeapYear leapYear = new LeapYear();
-        Assertions.assertTrue(leapYear.convert(4));
+        Assertions.assertTrue(leapYear.convert(number));
     }
 
-    @Test
-    void convert_8_to_true(){
-        LeapYear leapYear = new LeapYear();
-        Assertions.assertTrue(leapYear.convert(8));
-    }
-    @Test
-    void convert_1996_to_true(){
-        LeapYear leapYear = new LeapYear();
-        Assertions.assertTrue(leapYear.convert(1996));
-    }
+
+    
+
 }
