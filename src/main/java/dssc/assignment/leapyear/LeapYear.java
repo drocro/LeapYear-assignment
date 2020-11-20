@@ -16,7 +16,9 @@ public class LeapYear {
 
 
     public boolean convert(int i) {
-        if (i % 100 ==0) {
+        if (i==400){
+            return true;
+        }else if (i % 100 ==0) {
             return false;
         } else if (i % 4 == 0) {
             return true;
