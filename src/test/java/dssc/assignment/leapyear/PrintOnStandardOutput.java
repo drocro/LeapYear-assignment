@@ -18,6 +18,15 @@ public class PrintOnStandardOutput {
 
         Assertions.assertEquals("true", fakeStandardOutput.toString());
     }
+    @Test
+    void false_to_string(){
+        ByteArrayOutputStream fakeStandardOutput = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(fakeStandardOutput));
+        LeapYear leapYear = new LeapYear();
 
+        leapYear.PrintIsLeap(2001);
+
+        Assertions.assertEquals("false", fakeStandardOutput.toString());
+    }
 
 }
