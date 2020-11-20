@@ -21,11 +21,10 @@ public class Convert {
         Assertions.assertFalse(leapYear.convert(number));
     }
 
-    @ParameterizedTest
-    @ValueSource(ints ={300, 600, 1900})
-    void atypical_leap_years_to_true(int number){
+    @Test
+    void atypical_not_leap_year_300_to_false(){
         LeapYear leapYear = new LeapYear();
-        Assertions.assertTrue(leapYear.convert(number));
+        Assertions.assertFalse(leapYear.convert(300));
     }
 
 
