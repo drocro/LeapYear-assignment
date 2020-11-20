@@ -28,4 +28,8 @@ public class LeapYear {
 
 
     }
+
+    public void PrintIsLeap(int i) {
+        System.out.print(convert(i));
+    }
 }
