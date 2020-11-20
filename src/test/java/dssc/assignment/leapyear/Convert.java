@@ -14,22 +14,13 @@ public class Convert {
         Assertions.assertTrue(leapYear.convert(number));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints ={3, 21, 2001})
+    void basic_not_leap_years_to_false(int number){
+        LeapYear leapYear = new LeapYear();
+        Assertions.assertFalse(leapYear.convert(number));
+    }
 
-    @Test
-    void year_3_to_false(){
-        LeapYear leapYear = new LeapYear();
-        Assertions.assertFalse(leapYear.convert(3));
-    }
-    @Test
-    void year_21_to_false(){
-        LeapYear leapYear = new LeapYear();
-        Assertions.assertFalse(leapYear.convert(21));
-    }
-    @Test
-    void year_2001_to_false(){
-        LeapYear leapYear = new LeapYear();
-        Assertions.assertFalse(leapYear.convert(21));
-    }
 
 
 
