@@ -29,21 +29,12 @@ public class Convert {
         Assertions.assertFalse(leapYear.convert(number));
     }
 
-    @Test
-    void atypical_leap_year_400_to_true() {
-        LeapYear leapYear = new LeapYear();
-        Assertions.assertTrue(leapYear.convert(400));
-    }
-    @Test
-    void atypical_leap_year_800_to_true() {
-        LeapYear leapYear = new LeapYear();
-        Assertions.assertTrue(leapYear.convert(800));
-    }
 
-    @Test
-    void atypical_leap_year_2000_to_true() {
+    @ParameterizedTest
+    @ValueSource(ints = {400, 800, 2000})
+    void atypical_leap_years_to_true(int number) {
         LeapYear leapYear = new LeapYear();
-        Assertions.assertTrue(leapYear.convert(2000));
+        Assertions.assertTrue(leapYear.convert(number));
     }
 
 
