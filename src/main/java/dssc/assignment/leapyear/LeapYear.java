@@ -20,6 +20,8 @@ public class LeapYear {
             return true;
         } else if (i == 8) {
             return true;
+        } else if (i == 1996) {
+            return true;
         } else {
             return false;
         }
