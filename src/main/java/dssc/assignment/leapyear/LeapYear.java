@@ -16,11 +16,14 @@ public class LeapYear {
 
 
     public boolean convert(int i) {
-        if (i==4) {
+        if (i == 4) {
             return true;
-        }else{
+        } else if (i == 8) {
+            return true;
+        } else {
             return false;
         }
+
 
     }
 }

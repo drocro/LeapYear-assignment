@@ -11,4 +11,9 @@ public class Convert {
         Assertions.assertTrue(leapYear.convert(4));
     }
 
+    @Test
+    void convert_8_to_true(){
+        LeapYear leapYear = new LeapYear();
+        Assertions.assertTrue(leapYear.convert(8));
+    }
 }
