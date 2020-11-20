@@ -16,11 +16,7 @@ public class LeapYear {
 
 
     public boolean convert(int i) {
-        if (i == 4) {
-            return true;
-        } else if (i == 8) {
-            return true;
-        } else if (i == 1996) {
+        if (i % 4 == 0) {
             return true;
         } else {
             return false;
