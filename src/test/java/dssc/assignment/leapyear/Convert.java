@@ -20,7 +20,11 @@ public class Convert {
         LeapYear leapYear = new LeapYear();
         Assertions.assertFalse(leapYear.convert(3));
     }
-
+    @Test
+    void year_21_to_false(){
+        LeapYear leapYear = new LeapYear();
+        Assertions.assertFalse(leapYear.convert(21));
+    }
 
 
 
