@@ -33,6 +33,12 @@ public class Convert {
         Assertions.assertTrue(leapYear.convert(600));
     }
 
+    @Test
+    void atypical_leap_year_1900_to_true(){
+        LeapYear leapYear = new LeapYear();
+        Assertions.assertTrue(leapYear.convert(1900));
+    }
+
 
 
 
